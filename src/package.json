@@ -1,0 +1,23 @@
+{
+  "name": "practice-node-pg",
+  "version": "1.0.0",
+  "description": "A practice application using the node postgres client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kayra Alat",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-promise-router": "^4.1.1",
+    "pg": "^8.7.1"
+  }
+}
