@@ -7,3 +7,5 @@ database:
 	@psql -c "GRANT ALL PRIVILEGES ON DATABASE nodepg TO nodepg_user"
 	@psql -d nodepg -f src/database.sql
 	
+application:
+	@npm i
