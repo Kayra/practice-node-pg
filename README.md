@@ -4,6 +4,7 @@ This is the code written while following [Glaucia Lemos'](https://dev.to/glaucia
 
 Technologies used:
 
-* psql (PostgreSQL): 14.1
+* [node-postgres](https://github.com/brianc/node-postgres): 8.7.1
+* postgresql: 14.1
 * node: 17.4.0
 * npm: 8.3.1
