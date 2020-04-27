@@ -4,7 +4,8 @@
   "description": "A practice application using the node postgres client.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Kayra Alat",
