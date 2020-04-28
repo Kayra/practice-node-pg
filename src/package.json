@@ -2,10 +2,10 @@
   "name": "practice-node-pg",
   "version": "1.0.0",
   "description": "A practice application using the node postgres client.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "dev": "nodemon",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "Kayra Alat",
