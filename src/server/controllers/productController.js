@@ -18,3 +18,11 @@ exports.createProduct = async (req, res) => {
     });
 
 };
+
+
+exports.listAllProducts = async (req, res) => {
+
+    const response = await db.query("SELECT * FROM products ORDER BY product_name ASC");
+    res.status(200).send(response.rows);
+
+}
