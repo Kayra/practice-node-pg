@@ -47,4 +47,20 @@ exports.updateProductById = async (req, res) => {
         }  
     });
 
-}
+};
+
+exports.deleteProductById = async (req, res) => {
+
+    const productId = parseInt(req.params.id);
+
+    const exists = await db.query("SELECT 1 FROM products WHERE product_id = $1 LIMIT 1", [productId]);
+    if (!exists.rows.length) {
+        res.sendStatus(404);
+    } else {
+        await db.query("DELETE FROM products WHERE product_id = $1", [productId]);
+        res.status(200).send({
+            message: `Product ${productId} deleted successfully.`
+        });
+    }
+
+};
