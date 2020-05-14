@@ -1,5 +1,6 @@
 const db = require('../database');
 
+const getId = (req) => parseInt(req.params.id);
 
 exports.createProduct = async (req, res) => {
 
@@ -25,14 +26,14 @@ exports.listAllProducts = async (req, res) => {
 };
 
 exports.getProductById = async (req, res) => {
-    const productId = parseInt(req.params.id);
+    const productId = getId(req);
     const response = await db.query("SELECT * FROM products WHERE product_id = $1", [productId]);
     res.status(200).send(response.rows);
 };
 
 exports.updateProductById = async (req, res) => {
 
-    const productId = parseInt(req.params.id);
+    const productId = getId(req);
     const { product_name, quantity, price } = req.body;
 
     await db.query(
@@ -51,7 +52,7 @@ exports.updateProductById = async (req, res) => {
 
 exports.deleteProductById = async (req, res) => {
 
-    const productId = parseInt(req.params.id);
+    const productId = getId(req);
 
     const exists = await db.query("SELECT 1 FROM products WHERE product_id = $1 LIMIT 1", [productId]);
     if (!exists.rows.length) {
