@@ -1,5 +1,9 @@
 .PHONY: database
 
+system:
+	-${MAKE} database
+	-${MAKE} dotenv
+	-${MAKE} application
 
 database:
 	@psql -c "CREATE DATABASE nodepg"
